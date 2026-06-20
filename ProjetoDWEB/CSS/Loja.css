@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../Fontes/Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    min-height: 100vh;
+    background-image: url('../Gif/Background');
+    background-position: center;
+    background-repeat: repeat;
+    background-color: #0c001c;
+    margin: 0;
+    box-sizing: border-box;
+    }
+#menu {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px; 
+    text-align: center; 
+}
+
+.grupo-loja {
+    background-color: #0c001c;
+    border: 2px solid #ff0068;
+    box-shadow: 0 0 8px 8px #ff00663d; 
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav.paginacao-container{
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .grupo-loja {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        gap: 30px 45px;
+        padding: 20px;
+        box-shadow: 0 0 50px 8px #ff006651; 
+    }
+}
+.Caixa {
+    border: 1px solid #ff0068;
+    background-color: #0c001c;
+    box-shadow: 0 0 20px 8px #00000095; 
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;        
+    color: aliceblue;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Caixa:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 8px #ff006630; 
+}
+h3{
+    margin-top: 0;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Minecraft', Arial, Helvetica, sans-serif;
+}
+h4 {
+    text-align: center;
+    align-self: center;
+    background-color: #ff0068;
+    border-radius: 5px;
+    width: 80px;
+    color: #0c001c;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+.img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+.texto {
+    padding: 25px; 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: justify;
+}
+.texto p {
+    margin-top: 4px;     
+    margin-bottom: 4px;  
+}
+
+nav.paginacao-container > ul.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+
+nav.paginacao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+nav.paginacao-container > ul.paginacao > li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+ul.paginacao {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.pag-link {
+    display: block;
+    padding: 8px 16px;
+    color: aliceblue;              
+    background-color: #0c001c;     
+    border: 1px solid #ff0068;      
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.2s, color 0.2s;
+}
+ul.paginacao li:first-child a.pag-link {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+ul.paginacao li:last-child a.pag-link {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+a.pag-link:hover {
+    background-color: #ff0068;        
+    color: #0c001c;
+    font-weight: bolder;               
+}
+a.pag-link.ativo {
+    background-color: #ff0068;
+    color: #0c001c;
+    font-weight: bold;
+}
+a.pag-link.desativado {
+    pointer-events: none; 
+    cursor: default;         
+}

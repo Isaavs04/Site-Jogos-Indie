@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap');
+
+ /*estilos gerais*/
+
+    *{
+        box-sizing:border-box;
+    }
+
+    body{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../Gif/Background);
+        background-position: center;
+        background-repeat: repeat;
+        background-color: #0c001c;
+        margin: 0;
+    }
+
+      main{
+        width: min(90vw, 90vh, 500px);
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 8px solid #ff0068;    
+        padding: clamp(20px, 5vw, 60px);   
+        box-shadow: 0 0 15px 4px #ff0068;
+    }
+
+    h1{
+        font-family: "Jersey 20", sans-serif;
+        color: white;
+        text-align: center;
+        text-shadow: 6px 6px 1px #ff0068;
+        margin: 0;
+    }
+
+     .titulo{
+        line-height: 0.8;
+    }
+
+    #titulo1{
+       font-size: clamp(3rem, 15cqw, 8rem);
+    }
+
+    #titulo2{
+        font-size: clamp(2rem, 14cqw, 7rem);
+    }
+
+    h2#abrirMenu{
+        color: white;
+        font-family: "Jersey 20", sans-serif;
+        text-align: center;
+        width: fit-content;
+        font-size: clamp(20px, 4vw, 50px);
+        padding: 3px;
+        margin: 1.5vh 0 0;
+    }
+
+    #start{
+        display: flex;
+        justify-content: center;
+        margin-top:clamp(10px,2vh,30px);
+    }
+
+     #botaoStart{
+        width:clamp(120px,20vw,250px);
+        max-width: 100%;
+    }
+
+   /*animação carregamento*/ 
+
+   #loading {
+    position: fixed;
+    inset: 0;
+    background-color:#12022b;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+    div#loading > h2{
+        color: white;
+        font-family: "Silkscreen", sans-serif;
+    }
+
+    #barra {
+    width: 300px;
+    height: 20px;
+    border: 2px solid #ff0068;
+    border-radius: 10px;
+    }
+
+    #progresso {
+    height: 100%;
+    width: 0%;
+    background-color: #ff0068;
+    border-radius: 10px;
+    transition: 0.2s;
+    }
+
+
+  /*telas grandes*/
+@media screen and (min-width: 900px) 
+{
+    body{
+        font-size: 1em;
+    }
+
+    main{
+        width: 80vw;
+        max-width: 900px;
+        padding: 60px;
+        aspect-ratio: 16 /9;
+    }
+    
+    h2#abrirMenu{
+       width: fit-content;
+    }
+    #abrirMenu:hover::before,
+    #abrirMenu:hover::after, a:hover::before {
+        opacity: 1;
+    }
+
+      #abrirMenu{
+        width: 30vw;
+        padding: 4px;
+        margin-top: 2vh;
+        cursor: pointer;
+        margin: 0;
+        text-align: center;
+    }
+
+     #botaoStart{
+        cursor: pointer;
+        }
+
+}
